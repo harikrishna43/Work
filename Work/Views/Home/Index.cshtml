@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron"style="background-color:forestgreen">
+    <div class="row">
+        <div class="input-group col-lg-12">
+            <div class="input-group-btn search-panel">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <span id="search_concept">All Categories</span> <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="">Home Services</a></li>
+                    <li><a href="">Automotive</a></li>
+                    <li><a href="">Business</a></li>
+                </ul>
+            </div>
+            <input type="hidden" name="search_param" value="all" id="search_param">
+            <input type="text" class="form-control " style="max-width: inherit" name="x" placeholder="Search...">
+            <span class="input-group-btn">
+                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-search"></span></button>
+               
+            </span>
+            <a class="pull-right" style="color:white;font-size:x-large" href="">Resgistration</a>
+            
+            
+        </div>
+    </div>
+</div>
+
+@Html.Partial("_WelcomePartial")
+@Html.Partial("_ProcessSteps")
+<div class="row">
+    
+</div>
+<div class="row">
+    <div class="col-md-3 lg-filter-area">
+        @Html.Partial("_SideMenuPartial")
+    </div>
+    <div class="col-md-9">
+
+
+        <h4 class="text-primary text-center">
+            ORDERS FOR PLUMBING
+        </h4>
+        @Html.Partial("_JobPostPartial")
+        @Html.Partial("_JobPostPartial")
+        @Html.Partial("_JobPostPartial")
+        @Html.Partial("_JobPostPartial")
+        @Html.Partial("_JobPostPartial")
+
+        <h4 class="text-primary text-center">
+            ORDERS FOR PLUMBING (Style 2)
+        </h4>
+        @Html.Partial("_JobPostPartial2")
+        @Html.Partial("_JobPostPartial2")
+        @Html.Partial("_JobPostPartial2")
+        @Html.Partial("_JobPostPartial2")
+        @Html.Partial("_JobPostPartial2")
+
+    </div>
+</div>
+
+<script src="/Scripts/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+    $('.breadcrumb  a').click(function () {
+        $(this).parent('li.halfprimary').removeClass("halfprimary").addClass("primary");
+    });
+    
+</script>
