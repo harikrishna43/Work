@@ -1,0 +1,27 @@
+﻿<div class="container col-lg-10">
+    <div class="row">
+        <ul class="breadcrumb">
+            <li class="primary"><a href="#">Tender</a></li>
+            <li class="@(ViewBag.Title == "Worker" ||ViewBag.Title == "Job Description"|| ViewBag.Title == "Start Tender"?"primary": "halfprimary")">@Html.ActionLink("Worker", "Worker", "Home")</li>
+            <li class="@(ViewBag.Title == "Job Description" ||ViewBag.Title == "Start Tender" ?"primary": "halfprimary")">@Html.ActionLink("Job Description", "JobDescription","Home")</li>
+            <li class="@(ViewBag.Title == "Start Tender" ?"primary": "halfprimary")">@Html.ActionLink("Start Tender", "StartTender","Home")</li> 
+        </ul>
+        
+    </div>
+  </div>
+<div class="col-lg-2 pull-right">
+    <a  style="font-size:x-large;color:#0094ff;padding-left:50px; text-decoration:underline">INFO</a>
+    <br />
+    <p>to get more information about the option</p>
+</div>
+<div class="container col-lg-10">
+    <div class="row">
+        <ul class="list-inline">
+            <li style="color:red" class="text-center col-lg-2"> create a tender to get the best price</li>
+            <li style="color:red;"class="text-center col-lg-3 ">choose a worker</li>
+            <li style="color:red;"class="text-center col-lg-4">click to fill the form</li>
+            <li style="color:red;">log in bedore start it</li>
+        </ul>
+    </div>
+</div>
+

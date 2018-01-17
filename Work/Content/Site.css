@@ -1,0 +1,72 @@
+﻿body {
+    /* Default padding needed to accomodate navbar is 50. Increase it to hold the big logo*/
+    padding-top: 97px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+#site_image {
+    width: 256px;
+    height: 50px;
+    border-color: black;
+}
+
+/*  clear bootstrap header colors */
+.navbar-default {
+    background-color: white;
+    border-color: white;
+}
+
+/*Creates a vertical divider*/
+.vertical-divider {
+ border-left: 1px solid blue;
+}
+
+.well.post{
+    background-color: white;
+}
+
+.border_right{
+    border-right: 2px solid red double;
+}
+
+#accordion .glyphicon { margin-right:10px; }
+#accordion .panel-collapse>.list-group {margin-bottom: 0;}
+
