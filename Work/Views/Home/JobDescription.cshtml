@@ -3,7 +3,8 @@
     ViewBag.Title = "Job Description";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+@using Work.Models;
+@model Work.Models.WorkerModel
 <div class="jumbotron" style="background-color:forestgreen">
     <div class="row">
         <div class="input-group col-lg-12">
@@ -43,6 +44,46 @@
         <h4 class="text-primary text-center">
             @ViewBag.Title
         </h4>
-       @Html.Partial("_JobPostPartial2")
+        @Html.BeginForm("JobDescription", "Home", FormMethod.Post){ 
+        <div class="panel panel-default">
+
+            <div class="panel-body">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="exampleModalLabel">Job Description</h4>
+                            @Html.HiddenFor(m=>m.WorkerCategory)
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="recipient-name" class="col-form-label">Choose your City:</label>
+                                    @Html.TextBoxFor(m=>m.City)
+                                </div>
+                                <div class="form-group">
+                                    <label for="message-text" class="col-form-label">Give your headline:</label>
+                                    @Html.TextBoxFor(m=>m.HeadLine)
+                                </div>
+                                <div class="form-group">
+                                    <label for="message-text" class="col-form-label">Describe detail that you want to be done</label>
+                                    @Html.TextAreaFor(m => m.Description)
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            
+                            <button type="submit" class="btn btn-primary">Post Job</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+
+            </div>
+        </div>
+        }
     </div>
 </div>

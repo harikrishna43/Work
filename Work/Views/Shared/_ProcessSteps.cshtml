@@ -1,7 +1,7 @@
 ﻿<div class="container col-lg-10">
     <div class="row">
         <ul class="breadcrumb">
-            <li class="primary"><a href="#">Tender</a></li>
+            <li class="primary">@Html.ActionLink("Tender", "Index", "Home")</li>
             <li class="@(ViewBag.Title == "Worker" ||ViewBag.Title == "Job Description"|| ViewBag.Title == "Start Tender"?"primary": "halfprimary")">@Html.ActionLink("Worker", "Worker", "Home")</li>
             <li class="@(ViewBag.Title == "Job Description" ||ViewBag.Title == "Start Tender" ?"primary": "halfprimary")">@Html.ActionLink("Job Description", "JobDescription","Home")</li>
             <li class="@(ViewBag.Title == "Start Tender" ?"primary": "halfprimary")">@Html.ActionLink("Start Tender", "StartTender","Home")</li> 

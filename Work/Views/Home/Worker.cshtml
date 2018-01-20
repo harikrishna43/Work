@@ -1,8 +1,9 @@
-﻿
+﻿@using Work.Models;
 @{
     ViewBag.Title = "Worker";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@model Work.Models.WorkerModel
 <div class="jumbotron" style="background-color:forestgreen">
     <div class="row">
         <div class="input-group col-lg-12">
@@ -42,8 +43,32 @@
         <h4 class="text-primary text-center">
             @ViewBag.Title
         </h4>
-       
+        <div class="panel panel-default">
+        @Html.BeginForm("Worker","Home",FormMethod.Post) {   
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-9 border_right">
+                        @Html.DropDownListFor(m=>m.WorkerCategory,
+                    new SelectList(Enum.GetValues(typeof(category))),
+                    "Select Category", new { onchange = "this.form.submit();" })
+                    </div>
+                    <div class="col-md-3">
+                        <div class="row vertical-divider">
+                            <div class="col-md-6">
+                                <a href="#">Send Message</a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">Add to Favorites</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            }
+        </div>
     </div>
+    
 </div>
 
 
