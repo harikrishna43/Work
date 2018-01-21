@@ -1,0 +1,7 @@
+*.suo
+packages
+bin
+obj
+.user
+/Work/*.user
+/.vs/Work/v15/Server/sqlite3
